@@ -32,4 +32,25 @@ class PropublicaAPI:
         df = pd.concat(frames)
         return df
 
+    def get_orgs(self, org_list):
+        frames = []
+        for i in org_list:
+            try:
+                att_url = self.url + f"{i}" + ".json"
+                response = requests.get(att_url, headers=self.header)
+                print(att_url)
+                print(response)
+                response = response.json()
+                record_dict = response['organization']
+                print(record_dict)
+                df = pd.DataFrame(record_dict, index=[0])
+                frames.append(df)
+            except requests.exceptions.JSONDecodeError:
+                continue
+            except KeyError:
+                break
+
+        df = pd.concat(frames)
+        return df
+
 
