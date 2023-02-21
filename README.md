@@ -9,3 +9,8 @@ Our hope is to use this data to:
 - Analyze budget, staffing, and services of orgs in our community
 - Uncover insights into how we can maximize efficiency in our invoicing, RFPs,
   staffing, salaries, and services.
+
+
+** UPDATE **
+This project is still in progress, but I have produced a Tableau Viz to guide future development:
+https://public.tableau.com/app/profile/frederic8486/viz/BaltimoreNPODashboard/BaltimoreNPOdashboard
